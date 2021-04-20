@@ -16,8 +16,7 @@
   body.appendChild(next);
   body.appendChild(previous);
 
-
-  // 1  Se puede realizar la busqueda mediande el nombre del pokemos o  su numero de ID si lo conoce
+  // 1  Se puede realizar la busqueda mediande el nombre del pokemon o  su numero de ID si lo conoce.
   // 2  Si el pokemon está escrito incorrecto o no existe, se informará en el input value. 
 
   buttonFind.addEventListener("click", function( event ) {
