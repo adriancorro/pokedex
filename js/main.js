@@ -27,16 +27,21 @@
   // 2  Si el pokemon está escrito incorrecto o no existe, se informará en el input value. 
 
   buttonFind.addEventListener("click", function( event ) {
-    if (input.value){
+    if ( input.value){
       getPoke(input.value);
     }else{
-      input.value = "Escriba un valor"
+      input.value = 1;
+      getPoke(input.value)
     }
   }, false);
 
   next.addEventListener("click", function( event ) {
+   
     input.value ++
-    getPoke(input.value);
+      
+      getPoke(input.value);
+    
+    
   }, false);
 
   previous.addEventListener("click", function( event ) {
