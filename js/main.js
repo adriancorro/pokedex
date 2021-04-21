@@ -7,7 +7,14 @@
   let next = document.createElement("button");
   let previous = document.createElement("button");
   let input = document.createElement("input");
-  
+  buttonFind.setAttribute("class", "find")
+  previous.setAttribute("class", "previous")
+  input.setAttribute("class", "input")
+  next.setAttribute("class", "next")
+  namePoke.setAttribute("class", "namePoke")
+  halbilitys.setAttribute("class", "halbilitys")
+  imgPoke.setAttribute("class", "imgPoke")
+  typePoke.setAttribute("class", "typePoke")
   buttonFind.innerText = "find"
   next.innerText = "next"
   previous.innerText = "previous"
