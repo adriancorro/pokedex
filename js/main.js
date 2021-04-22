@@ -7,6 +7,7 @@
   let next = document.createElement("button");
   let previous = document.createElement("button");
   let input = document.createElement("input");
+  let divScreen = document.createElement("div");
   buttonFind.setAttribute("class", "find glow-on-hover")
   previous.setAttribute("class", "previous glow-on-hover-previous")
   input.setAttribute("class", "input")
@@ -16,14 +17,17 @@
   imgPoke.setAttribute("class", "imgPoke")
   typePoke.setAttribute("class", "typePoke")
   body.appendChild(buttonFind);
-  body.appendChild(input);
+
   body.appendChild(next);
   body.appendChild(previous);
+  body.appendChild(divScreen);
 
   // 1  Se puede realizar la busqueda mediande el nombre del pokemon o  su numero de ID si lo conoce.
   // 2  Si el pokemon está escrito incorrecto o no existe, se informará en el input value. 
 
   buttonFind.addEventListener("click", function( event ) {
+    divScreen.setAttribute("class", "backgroung-glow-click") 
+      body.appendChild(input);
     if ( input.value){
       getPoke(input.value);
     }else{
@@ -34,6 +38,8 @@
 
   next.addEventListener("click", function( event ) {
     // podiamos hacer la comprobacion si el valor del input es o no  numerico con isNaN(number) o isNaN("string")
+    divScreen.setAttribute("class", "backgroung-glow-click") 
+    body.appendChild(input);
     input.value ++
     getPoke(input.value);
 
