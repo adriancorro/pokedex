@@ -3,7 +3,7 @@
 .find{
     position: absolute;
     top: 320px;
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(201, 201, 201);
     left: 115px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -88,16 +88,22 @@
 
 .imgPoke{
     position: absolute;
+    left: 550px;
+    top: 290px;
+    width: 170px;
+}
+
+.infoUser{
+    position: absolute;
+    top: 170px;
     left: 480px;
-    bottom: 0px;
-    top: 280px;
 }
 
 .typePoke{
     position: absolute;
     left: 480px;
     bottom: 0px;
-    top: 370px;
+    top: 270px;
 }
 
 .glow-on-hover:before {
@@ -210,9 +216,20 @@
     opacity: 1;
 }
 
+.glow-on-hover-next:focus {
+  
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 55px 55px 55px 55px;
+}
+
 .glow-on-hover-next:after {
     background-size: cover;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGaVddNVHhLg6IZAOpGLo765r7dgqqWwJzAX6Bkll1z19E99Ku65r9yPhZW621tTRSP0&usqp=CAU");
+    background-image: url("../next.png");
      z-index: -1;
     content: '';
     position: absolute;
@@ -266,5 +283,16 @@
     left: 0;
     top: 0;
     border-radius: 60px;
+}
+
+.glow-on-hover-previous:focus {
+  
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 55px 55px 55px 55px;
 }
 
