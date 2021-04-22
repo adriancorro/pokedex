@@ -7,17 +7,14 @@
   let next = document.createElement("button");
   let previous = document.createElement("button");
   let input = document.createElement("input");
-  buttonFind.setAttribute("class", "find")
-  previous.setAttribute("class", "previous")
+  buttonFind.setAttribute("class", "find glow-on-hover")
+  previous.setAttribute("class", "previous glow-on-hover-previous")
   input.setAttribute("class", "input")
-  next.setAttribute("class", "next")
+  next.setAttribute("class", "next glow-on-hover-next")
   namePoke.setAttribute("class", "namePoke")
   halbilitys.setAttribute("class", "halbilitys")
   imgPoke.setAttribute("class", "imgPoke")
   typePoke.setAttribute("class", "typePoke")
-  buttonFind.innerText = "find"
-  next.innerText = "next"
-  previous.innerText = "previous"
   body.appendChild(buttonFind);
   body.appendChild(input);
   body.appendChild(next);
@@ -36,12 +33,10 @@
   }, false);
 
   next.addEventListener("click", function( event ) {
-   
+    // podiamos hacer la comprobacion si el valor del input es o no  numerico con isNaN(number) o isNaN("string")
     input.value ++
-      
-      getPoke(input.value);
-    
-    
+    getPoke(input.value);
+
   }, false);
 
   previous.addEventListener("click", function( event ) {
@@ -54,7 +49,9 @@
     return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
       .then(data => data.json())
       .then(function(response) {  
-        if( typeof pokemon == "string")  {
+        // podemos hacer la comprobacion si el valor del input es o no  numerico con isNaN(number) o isNaN("string")
+        const queryParams = new URLSearchParams(window.location.search)
+        if(  isNaN(pokemon) )  {
           pokemon = response.id 
           input.value =  response.id
         }    
@@ -74,7 +71,7 @@
         }
       })
       .catch(error => {
-        input.value = "El pokemon no existe "
+        input.value = 1;
         console.log(error)
     })
   };

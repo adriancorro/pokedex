@@ -1,25 +1,28 @@
-.main {
-    background-image: url("pokedex.png");
 
-}
 
 .find{
     position: absolute;
-    top: 330px;;
-    background-color: aquamarine;
-    left: 120px;
+    top: 320px;;
+    background-color: black;
+    left: 115px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     line-height:32px;
     margin: 5px;
   padding:10px;
-  width:100px;
-  height:100px;
+  width:120px;
+  height:120px;
   font-size:11px;
   line-height:32px;
   text-transform: uppercase;
   float:left;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    background-size: cover;
+    background-image: url("/x.png");
+
 }
 
 .input{
@@ -33,41 +36,49 @@
     color: #f0f8ff00;
     vertical-align: inherit;
     position: absolute;
-    left: 910px;
-    top: 350px;
+    left: 900px;
+    top: 340px;
     border-radius: 50px;
     line-height: 32px;
     margin: 5px;
     padding: 10px;
-    width: 60px;
-    height: 60;
+    width: 70px;
+    height: 70px;
     font-size: 8px;
     line-height: 32px;
     text-transform: uppercase;
-    float: left;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
     background-size: cover;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGaVddNVHhLg6IZAOpGLo765r7dgqqWwJzAX6Bkll1z19E99Ku65r9yPhZW621tTRSP0&usqp=CAU");
 }
+
 
 .previous{
     color: #f0f8ff00;
     margin-bottom: 500px;
     position: absolute;
     left: 970px;
-    top: 295px;
+    top: 290px;
     border-radius: 50px;
     line-height: 32px;
     margin: 5px;
     padding: 10px;
-    width: 60px;
-    height: 60;
+    width: 70px;
+    height: 70px;
     font-size: 8px;
     line-height: 32px;
     text-transform: uppercase;
     float: left;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
     background-size: cover;
     background-image: url("https://image.flaticon.com/icons/png/128/64/64044.png?ga=GA1.2.1746131912.1618272000");
 }
+
+
 
 .namePoke{
     position: absolute;
@@ -96,3 +107,144 @@
     bottom: 0px;
     top: 370px;
 }
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+    line-height:32px;
+    
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    background-size: cover;
+    background-image: url("/x.png");
+     z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.glow-on-hover-next:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+    line-height:32px;
+    
+}
+
+.glow-on-hover-next:active {
+    color: #000
+}
+
+.glow-on-hover-next:active:after {
+    background: transparent;
+}
+
+.glow-on-hover-next:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover-next:after {
+    background-size: cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDGaVddNVHhLg6IZAOpGLo765r7dgqqWwJzAX6Bkll1z19E99Ku65r9yPhZW621tTRSP0&usqp=CAU");
+     z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 60px;
+}
+
+
+.glow-on-hover-previous:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50px;
+    line-height:32px;
+    
+}
+
+.glow-on-hover-previous:active {
+    color: #000
+}
+
+.glow-on-hover-previous:active:after {
+    background: transparent;
+}
+
+.glow-on-hover-previous:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover-previous:after {
+    background-size: cover;
+    background-image: url("https://image.flaticon.com/icons/png/128/64/64044.png?ga=GA1.2.1746131912.1618272000");
+     z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 60px;
+}
+
