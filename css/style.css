@@ -1,5 +1,4 @@
 
-
 .find{
     position: absolute;
     top: 320px;
@@ -19,6 +18,11 @@
     outline: none;
     cursor: pointer;
     z-index: 1;
+}
+
+
+div {
+    font-family: system-ui;
 }
 
 .input{
